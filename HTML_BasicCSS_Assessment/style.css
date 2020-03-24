@@ -41,14 +41,14 @@ h3 {
 
 h4 {
   border-style: solid;
+  border-width: 2px;
   box-sizing: border-box;
-  width: 185px;
+  width: 175px;
   left: 50%;
   transform:translate(-50%, 0);
-  line-height: 10px;
-  padding: 10px; 
-  position: absolute;
-  border-width: 2px;
+  /* line-height: 10px; */
+  padding: 5px; 
+  position: relative;
   border-color: #feffff;
   color: #feffff;
   font-family: Arial, Helvetica, sans-serif;
