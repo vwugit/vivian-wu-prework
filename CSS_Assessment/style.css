@@ -1,0 +1,55 @@
+/**
+CSS Assessment
+ **/
+
+* {
+    box-sizing: border-box;
+    text-align: center;
+}
+
+body {
+    font-size: 24px;
+    color: black;
+}
+
+nav {
+    background: #818081;
+    width: 100%;
+    clear: both;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+}
+
+#middle {
+    margin: 70px 0px 30px 0px;
+}
+
+#left {
+    background: #0300fd;
+    float: left;
+    width: 50%;
+    height: 600px;
+    padding: 288px;
+    position: absolute;
+    left: 0;
+}
+
+#right {
+    background: #fe0001;
+    float: right;
+    width: 25%;
+    height: 600px;
+    padding-top: 288px;
+    position: absolute;
+    right: 0;
+}
+
+footer {
+    background: #028002;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    clear: both;
+}
