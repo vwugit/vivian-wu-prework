@@ -1,0 +1,23 @@
+* {
+  background-color: #79b9c6;
+}
+
+body {
+  text-transform: uppercase;
+  background-color: #79b9c6;
+}
+
+.jumbotron{
+  background-color: #79b9c6;
+  color: white;
+}
+
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+  color: black;
+  font-weight: 500;
+  font-size: 13px;
+}
