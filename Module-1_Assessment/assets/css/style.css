@@ -1,0 +1,22 @@
+* {
+    box-sizing: content-box;
+}
+
+nav {
+    background-color: white;
+    font-family: 'Georgia', Times, Times New Roman, serif;
+    font-weight: 500;
+}
+
+a.nav-link {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    font-family: 'Georgia', Times, Times New Roman, serif;
+    color: teal;
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+}
