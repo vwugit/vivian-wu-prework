@@ -18,7 +18,7 @@
     
     <header>
         <!-- Fixed navbar -->
-        <nav class="navbar sticky-top navbar-expand-lg navbar-light border-bottom border-dark p-0">
+        <nav class="navbar sticky-top navbar-expand-md navbar-light border-bottom border-dark p-0">
             <div class="container">
                 <a class="navbar-brand text-white my-0" style="padding: 14px; font-size: 25px; background-color: teal;" href="#">Vivian Wu</a>
                 <div id="navbar-default">
@@ -40,45 +40,46 @@
             </div>
         </nav>
     </header>
-    
-    <main role="main" class="container mx-auto my-5 p-4 bg-white" style="align-items: center; overflow:auto; border: 2px solid lightgrey; border-radius: 0;">
-        
-        <h1 class="mt-2">Say Hello!</h1>
-        <hr class="my-4">
-        
-        <form id="contact-form" method="post" action="contact.php" role="form">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="form-group">
-                        <label for="form_name">Name *</label>
-                        <input id="form_name" type="text" name="name" class="form-control" placeholder="Please enter your name" required="required" data-error="Name is required">
-                    </div>
-                </div>
-            </div>
-            
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="form-group">
-                        <label for="form_email">Email *</label>
-                        <input id="form_email" type="email" name="email" class="form-control" placeholder="Please enter your email" required="required" data-error="Valid email is required">
-                    </div>
-                </div>
-            </div>
-            
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="form-group">
-                        <label for="form_message">Message *</label>
-                        <textarea id="form_message" name="message" class="form-control" placeholder="Message for me" rows="4" required="required" data-error="Please, leave a message."></textarea>
-                    </div>
-                </div>
-                <div class="col-md-12">
-                    <input type="submit" class="btn btn-send text-white" style="background-color: teal;" value="Send message">
-                </div>
-            </div>
-        </form>
+     
+    <main role="main" class="container">
+        <div class="container my-5 p-4 bg-white" style="overflow:auto; border: 2px solid lightgrey; border-radius: 0;">
 
-</main>
+            <h1 class="mt-2">Say Hello!</h1>
+            <hr class="my-4">
+            
+            <form id="contact-form" method="post" action="contact.php" role="form">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="form_name">Name *</label>
+                            <input id="form_name" type="text" name="name" class="form-control" placeholder="Please enter your name" required="required" data-error="Name is required">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="form_email">Email *</label>
+                            <input id="form_email" type="email" name="email" class="form-control" placeholder="Please enter your email" required="required" data-error="Valid email is required">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="form_message">Message *</label>
+                            <textarea id="form_message" name="message" class="form-control" placeholder="Message for me" rows="4" required="required" data-error="Please, leave a message."></textarea>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <input type="submit" class="btn btn-send text-white" style="background-color: teal;" value="Send message">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main>
 
 <footer class="page-footer font-small blue bg-secondary text-white pt-4 fixed-bottom" style="border-top: 5px solid teal;"">
     <!-- Copyright -->
