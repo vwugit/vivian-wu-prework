@@ -14,7 +14,12 @@ a.nav-link {
 
 h1 {
     font-family: 'Georgia', Times, Times New Roman, serif;
-    color: teal;
+    color: #4aaaa5;
+}
+
+h5 {
+    font-family: 'Georgia', Times, Times New Roman, serif;
+    color: #ffffff;
 }
 
 p {
@@ -23,4 +28,17 @@ p {
 
 footer {
     background-color: #666666;
+}
+
+.card {
+    margin: 1rem auto;
+    position: relative; 
+}
+  
+.card-body {
+    z-index: 2;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
 }
