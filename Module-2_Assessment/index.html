@@ -9,10 +9,37 @@
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-</head>
+    <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet"></head>
 
-<body>
-
+<body style="background-image: url('assets/images/mickeyEars.jpg');">
+    <main role="main" class="container">
+        <header class="text-center m-4 p-4">
+            <h1> Disney Hangman</h1>
+        </header>
+        
+        <div class="container m-4 p-4 text-center" style="background-color: beige;">
+            <div class="row">
+                <div class="col mb-6">
+                    <div class="card">
+                        <!-- <img src="#" class="card-img-top"> -->
+                        <div class="card-body">
+                            <h5 class="card-title">Title</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-6">
+                    <h2>Press any key to start</h2>
+                    <h2 id="wins">Wins:</h2>
+                    <h2>Current Word</h2>
+                    <h3 id="currWord"></h3>
+                    <h2>Number of Guesses Remaining</h2>
+                    <h2 id="guessesLeft"></h2>
+                    <h2>Letters Already Guessed</h2>
+                    <h2 id="guessedWrong"></h2>
+                </div>
+            </div>
+        </div>
+    </main>
     <script src="assets/javascript/game.js"></script>
 </body>
 
