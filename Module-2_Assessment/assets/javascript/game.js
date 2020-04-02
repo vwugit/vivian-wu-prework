@@ -22,7 +22,6 @@ let newGame = function() {
         guess[i] = "_";
     }
 
-    console.log(word);
     displayedGuessCount.innerText = remainingGuesses;
     displayedWins.innerText = "Wins: " + winCount;
     displayedWord.innerHTML = guess.join(" ");
@@ -39,7 +38,6 @@ function checkKey(event) {
             while (idx != -1) {
                 guess[idx] = keyword;
                 idx = word.indexOf(keyword, idx + 1);
-                console.log(idx);
             }
         }
         else if (wrongLetters.join('').indexOf(keyword) >= 0) {
@@ -48,7 +46,6 @@ function checkKey(event) {
         else {
             remainingGuesses--;
             wrongLetters.push(keyword);
-            console.log(wrongLetters);
         }
 
         if (word === guess.join('')) {
@@ -72,9 +69,6 @@ function checkKey(event) {
     }
 }
 
-document.addEventListener('keydown', checkKey);
-newGame();
-
 function change() {
     var movieTitle = document.querySelector('#movie');
     movieTitle.innerText = prevWord;
@@ -82,4 +76,12 @@ function change() {
     var image = document.getElementById('poster');
     var moviePoster = `assets/images/${prevWord}.jpg`
     image.src = moviePoster;
+
+    var audio = document.getElementById('music');
+    var soundSource = `assets/audio/${prevWord}.mp3`;
+    audio.src = soundSource;
+    audio.play();
 }
+
+document.addEventListener('keydown', checkKey);
+newGame();
