@@ -10,6 +10,7 @@ let guess = [];
 let winCount = 0;
 let wrongLetters = [];
 let remainingGuesses = 12;
+let prevWord;
 
 let newGame = function() {
     word = wordList[Math.floor(Math.random() * wordList.length)].toUpperCase();
@@ -53,12 +54,15 @@ function checkKey(event) {
         if (word === guess.join('')) {
             alert('You guessed it');
             winCount++;
+            prevWord = word;
             newGame();
+            change();
         }
         if (remainingGuesses < 1) {
             alert('Better luck next time');
+            prevWord = word;
             newGame();
-            return;
+            change();
         }
 
         displayedGuessCount.innerText = remainingGuesses;
@@ -69,5 +73,13 @@ function checkKey(event) {
 }
 
 document.addEventListener('keydown', checkKey);
-
 newGame();
+
+function change() {
+    var movieTitle = document.querySelector('#movie');
+    movieTitle.innerText = prevWord;
+
+    var image = document.getElementById('poster');
+    var moviePoster = `assets/images/${prevWord}.jpg`
+    image.src = moviePoster;
+}
