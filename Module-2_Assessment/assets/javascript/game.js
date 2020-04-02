@@ -1,15 +1,15 @@
-winCount = document.querySelector('#wins');
-currentWord = document.querySelector('#currWord');
-guessesRemain = document.querySelector('#guessesLeft');
-wrongGuesses = document.querySelector('#guessedWrong');
+displayedWins = document.querySelector('#wins');
+displayedWord = document.querySelector('#currWord');
+displayedGuessCount = document.querySelector('#guessesLeft');
+displayedWrong = document.querySelector('#guessedWrong');
 
 const wordList = ['Aladdin', 'Mulan', 'Frozen', 'Hercules', 'Dumbo', 'Cinderella', 'Coco', 'Cars', 'Brave',
     'Bambi', 'Pinocchio', 'Fantasia', 'Tarzan', 'Cars', 'Enchanted', 'Bolt', 'Tangled', 'Zootopia', 'Moana'];
 let word = wordList[Math.floor(Math.random() * wordList.length)];
 let guess = [];
-let guessed = [];
+let wrongLetters = [];
 let remainingGuesses = 12;
-guessesRemain.innerText = remainingGuesses;
+displayedGuessCount.innerText = remainingGuesses;
 
 let start = function () {
     for (let i = 0; i < word.length; i++) {
@@ -21,20 +21,29 @@ let start = function () {
 start();
 
 // displays the letter progress
-currentWord.innerHTML = guess.join(" ");
+displayedWord.innerHTML = guess.join(" ");
 
-let checkKeyPressed = function (event) {
-    let keyword = String.fromCharCode(event.keycode);
-    console.log(word);
-    if (word.indexOf(keyword) > -1) {
-        console.log(true);
-    } else {
-        remainingGuesses--;
-    }
-    guessesRemain.innerText = remainingGuesses;
-}
+function checkKey(event) {
+    var x = event.keyCode;
+    let keyword = String.fromCharCode(x);
+    console.log(keyword);
 
-document.addEventListener('keypress', checkKeyPressed);
+  }
 
+// let checkKeyPressed = function(event) {
+//     // let keyword = String.fromCharCode(event.keycode);
+//     console.log(event.keycode);
+
+//     // if (word.indexOf(keyword) > -1) {
+//     //     console.log(true);
+//     // } else {
+//     //     remainingGuesses--;
+//     //     wrongLetters.push(keyword);
+//     //     console.log(wrongLetters);
+//     // }
+//     // displayedGuessCount.innerText = remainingGuesses;
+// }
+
+document.addEventListener('keydown', checkKey);
 
 
