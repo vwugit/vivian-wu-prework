@@ -49,7 +49,7 @@ function checkKey(event) {
         }
 
         if (word === guess.join('')) {
-            alert('You guessed it');
+            alert('You guessed it!');
             winCount++;
             prevWord = word;
             newGame();
