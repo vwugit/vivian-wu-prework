@@ -1,4 +1,4 @@
-# Module-2
+# Disney Hangman
 Module 2 Assessment
 
 This is a hangman like game with a *Disney* theme. :blush:\
